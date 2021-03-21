@@ -1,0 +1,308 @@
+/*--Fonts Embed--*/
+/*--Poppins--*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/*--Roboto--*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+/*--AUdiowide--*/
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+/*--Baloo Thumbi 2--*/
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
+* a {
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+select option {
+    font-family: "Source Sans Pro";
+}
+
+#socialbtn {
+    top: 65%;
+}
+
+/*--Import Files--*/
+/*--Variables--*/
+/*--Colors--*/
+@font-face {
+    font-family: "baloo_thambi_2regular";
+    src: url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
+    font-weight: normal;
+    font-style: normal;
+}
+/*--Fonts--*/
+.font-baloo {
+    font-family: "Poppins", sans-serif;
+}
+
+.font-roboto {
+    font-family: "Roboto", sans-serif;
+}
+
+.font-audiowide {
+    font-family: "Audiowide", cursive;
+}
+
+.font-size-27 {
+    font-size: 27px;
+}
+
+.font-size-40 {
+    font-size: 40px;
+}
+
+.font-size-50 {
+    font-size: 50px;
+}
+
+.font-size-60 {
+    font-size: 60px;
+}
+
+.font-size-70 {
+    font-size: 70px;
+}
+
+/*--Colors--*/
+.color-blue {
+    color: #34b7f1;
+}
+
+.color-black {
+    color: #000000;
+}
+
+.color-blue-bg {
+    background-color: #34b7f1;
+}
+
+/*--preloader--*/
+.preloader {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.preloader.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.preloader .boxes {
+    --size: 32px;
+    --duration: 800ms;
+    height: calc(var(--size) * 2);
+    width: calc(var(--size) * 3);
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    margin-top: calc(var(--size) * 1.5 * -1);
+    transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+}
+.preloader .boxes .box {
+    width: var(--size);
+    height: var(--size);
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+.preloader .boxes .box:nth-child(1) {
+    transform: translate(100%, 0);
+    animation: box1 var(--duration) linear infinite;
+}
+.preloader .boxes .box:nth-child(2) {
+    transform: translate(0, 100%);
+    animation: box2 var(--duration) linear infinite;
+}
+.preloader .boxes .box:nth-child(3) {
+    transform: translate(100%, 100%);
+    animation: box3 var(--duration) linear infinite;
+}
+.preloader .boxes .box:nth-child(4) {
+    transform: translate(200%, 0);
+    animation: box4 var(--duration) linear infinite;
+}
+.preloader .boxes .box > div {
+    --background: #34b7f1;
+    --top: auto;
+    --right: auto;
+    --bottom: auto;
+    --left: auto;
+    --translateZ: calc(var(--size) / 2);
+    --rotateY: 0deg;
+    --rotateX: 0deg;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    top: var(--top);
+    right: var(--right);
+    bottom: var(--bottom);
+    left: var(--left);
+    transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+}
+.preloader .boxes .box > div:nth-child(1) {
+    --top: 0;
+    --left: 0;
+}
+.preloader .boxes .box > div:nth-child(2) {
+    --background: #0e91cb;
+    --right: 0;
+    --rotateY: 90deg;
+}
+.preloader .boxes .box > div:nth-child(3) {
+    --background: #1cafef;
+    --rotateX: -90deg;
+}
+.preloader .boxes .box > div:nth-child(4) {
+    --background: #DBE3F4;
+    --top: 0;
+    --left: 0;
+    --translateZ: calc(var(--size) * 3 * -1);
+}
+@keyframes box1 {
+    0%, 50% {
+        transform: translate(100%, 0);
+    }
+    100% {
+        transform: translate(200%, 0);
+    }
+}
+@keyframes box2 {
+    0% {
+        transform: translate(0, 100%);
+    }
+    50% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100%, 0);
+    }
+}
+@keyframes box3 {
+    0%, 50% {
+        transform: translate(100%, 100%);
+    }
+    100% {
+        transform: translate(0, 100%);
+    }
+}
+@keyframes box4 {
+    0% {
+        transform: translate(200%, 0);
+    }
+    50% {
+        transform: translate(200%, 100%);
+    }
+    100% {
+        transform: translate(100%, 100%);
+    }
+}
+
+
+/*--Result--*/
+.result {
+    background: linear-gradient(135deg, #25aae1, #4481eb, #04befe, #3f86ed);
+}
+.result .wm-result {
+    position: absolute;
+    z-index: 1;
+    white-space: nowrap;
+    opacity: 0.3;
+    left: 50%;
+    color: #fff;
+    transform: translateX(-50%) translateY(-120%);
+}
+.result .rank-card {
+    text-align: center;
+    box-shadow: 0 0 10px white;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid #34b7f1;
+    border-radius: 2rem;
+    min-height: 400px;
+}
+.result .rank-card .rank-img {
+    position: absolute;
+    width: 100px;
+    right: -50px;
+    top: -50px;
+}
+.result .rank-card .rank-card-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 10px 30px rgba(6, 6, 7, 0.7);
+    margin: 0 auto 20px auto;
+    display: block;
+}
+.result .rank-card .rank-card-name {
+    font-family: "Roboto", sans-serif;
+    background: url("./assets/textbg.jpg") center center no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.result .rank-card .rank-card-institute, .result .rank-card .rank-card-dept, .result .rank-card .rank-card-sid {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+.result .rank-one {
+    transition: 0.5s ease;
+}
+.result .rank-one:hover {
+    transform: scale(1.2);
+}
+.result .rank-two, .result .rank-three {
+    transition: 0.5s ease;
+}
+.result .rank-two:hover, .result .rank-three:hover {
+    transform: scale(1.1);
+}
+
+/*--Media Qurey--*/
+@media only screen and (max-width: 1200px) {
+    .swiper-button-prev, .swiper-button-next {
+        display: none;
+    }
+
+    .btn-hover {
+        width: 150px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .btn-hover {
+        width: 150px;
+    }
+
+    nav {
+        background: #fff;
+    }
+    nav a {
+        color: #000000;
+    }
+}
+@media only screen and (max-width: 770px) {
+    .learn-more, .arrow {
+        display: none;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
